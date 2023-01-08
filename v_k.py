@@ -13,7 +13,7 @@ params = {
     'album_id': 'profile',
     'v': 5.131,
     'photo_sizes': 1,
-    # 'extended': 1,
+    'extended': 1,
     'access_token': token
 }
 response = requests.get(url, params=params)
@@ -47,7 +47,7 @@ def vk_img(id_user):
         'owner_id': id_user,
         'v': 5.131,
         'album_id': 'profile',
-        # 'extended': 1,
+        'extended': 1,
         'access_token': token
     }
 
@@ -63,7 +63,7 @@ def vk_img(id_user):
         # photos[img_name] = [photo_sizes]
         up = requests.get(img_url)
         photos[img_name] = img_url
-        pprint(img_url)
+        # pprint(photos)
     return photos
 def ya_up(token_ya):
     url_ya = 'https://cloud-api.yandex.net/v1/disk/resources/upload'
@@ -86,8 +86,9 @@ def ya_up(token_ya):
     return 'loading is complete'
 
 if __name__ == '__main__':
-    ya_up('token_ya')
-    token_ya = 'y0_AgAAAAA2DJ8hAADLWwAAAADSx7XTG7leoV3WQc6pIew_M7wuHettd-A'
     vk_img(vk_id)
+    token_ya = 'y0_AgAAAAA2DJ8hAADLWwAAAADSx7XTG7leoV3WQc6pIew_M7wuHettd-A'
+    ya_up(token_ya)
+
 
 
