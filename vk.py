@@ -86,7 +86,7 @@ def ya_up(token_ya):
 
 if __name__ == '__main__':
     vk_img(vk_id)
-    token_ya = 'y0_AgAAAAA2DJ8hAADLWwAAAADSx7XTG7leoV3WQc6pIew_M7wuHettd-A'
+    token_ya = ''
     ya_up(token_ya)
 
 
